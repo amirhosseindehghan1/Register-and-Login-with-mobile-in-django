@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h1>
+    {% if user.is_authenticated %}
+    <h1>Welcome {{ user }}</h1>
+    {% else %}
+    <h1>User not found</h1>
+    {% endif %}
+    {% if user.is_superuser %}
+        You'r superadmin
+    {% endif %}
+
+</h1>
+
+
+
+</body>
+</html>
